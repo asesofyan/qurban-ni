@@ -688,5 +688,29 @@ window.editCatatanKambing=editCatatanKambing; window.editCatatanSapi=editCatatan
 window.editCatatanKuponSHQ=editCatatanKuponSHQ; window.editCatatanKuponPQ=editCatatanKuponPQ;
 window.kirimKuponViaWA=kirimKuponViaWA; window.kirimKuponPQViaWA=kirimKuponPQViaWA;
 </script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+import { getDatabase, ref, set, get, onValue } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB6xF0RYLp3Nrl9B49CQLYIYQnbABEHFzc",
+  authDomain: "qurban-ni-1447.firebaseapp.com",
+  databaseURL: "https://qurban-ni-1447-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "qurban-ni-1447",
+  storageBucket: "qurban-ni-1447.firebasestorage.app",
+  messagingSenderId: "320052832851",
+  appId: "1:320052832851:web:b8278ec49aa51d033b74a6",
+  measurementId: "G-2H72MGDWC1"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+window.db = db;
+window.firebaseRef = ref;
+window.firebaseSet = set;
+window.firebaseGet = get;
+window.firebaseOnValue = onValue;
+</script>
 </body>
 </html>
